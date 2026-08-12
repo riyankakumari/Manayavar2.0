@@ -1,0 +1,10 @@
+   # git init
+   # ls -a
+   # git remote add origin https://github.com/riyankakumari/Manayavar2.0.git
+   # git remote -v
+   # git status 
+   # git remote set-url origin https://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@github.com/riyankakumari/Manayavar2.0.git
+   # git push origin master
+   # git push origin master
+   # git add .
+   # git commit -m "code "
