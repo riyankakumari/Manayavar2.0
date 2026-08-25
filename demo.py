@@ -1,7 +1,6 @@
 def my_function():
   
-    a = 4
-   
+    a = 4  
     return a
 
 
