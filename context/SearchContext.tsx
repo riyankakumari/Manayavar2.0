@@ -7,7 +7,7 @@ type SearchContextType = {
 
 const SearchContext = createContext<SearchContextType | null>(null);
 
-export const SearchProvider = ({ children }: any) => {
+export const SearchProvider = ({ children }:{ children: React.ReactNode }) => {
   const [search, setSearch] = useState("");
 
   return (
