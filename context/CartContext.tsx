@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext<any>(null);
 
-export const CartProvider = ({ children }: any) => {
+export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   const [cart, setCart] = useState<any[]>([]);
 
   const addToCart = (product: any) => {
