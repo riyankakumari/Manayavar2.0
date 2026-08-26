@@ -1,14 +1,14 @@
 // react
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
-  View,
+  Alert,
+  StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  Alert,
+  View,
 } from "react-native";
-import { useState } from "react";
-import { useRouter } from "expo-router";
 import { useAuth } from "../context/authContext";
 
 const BASE_URL = "http://192.168.1.6:5000";
@@ -41,6 +41,7 @@ export default function Login() {
       }
     } catch (err) {
       Alert.alert("Error", "Network issue");
+      console.error("login failed", err);
     }
   };
 
