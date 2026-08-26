@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+//import { Link, Stack } from "expo-router";
 
 export default function AboutScreen() {
     return (
