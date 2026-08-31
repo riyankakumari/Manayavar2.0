@@ -1,10 +1,10 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import { useAuth } from "../context/authContext";
 import { useRouter } from "expo-router";
 import { useEffect } from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useAuth } from "../context/authContext";
 
 export default function Profile() {
-  const { user, logout } = useAuth();
+  const { user , logout } = useAuth();
   const router = useRouter();
 
   // Redirect safely using useEffect
@@ -27,7 +27,10 @@ export default function Profile() {
 
       <TouchableOpacity
         style={styles.logoutBtn}
-        onPress={() => router.push("/logout")}
+       onPress={async () => {
+        await logout();
+        router.replace("/login");
+  }}
       >
         <Text style={styles.btnText}>Logout</Text>
       </TouchableOpacity>
