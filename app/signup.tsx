@@ -1,15 +1,15 @@
+import { useRouter } from "expo-router";
+import { useState } from "react";
 import {
-  View,
+  ActivityIndicator,
+  Alert,
+  ScrollView,
+  StyleSheet,
+  //View,
   Text,
   TextInput,
   TouchableOpacity,
-  StyleSheet,
-  Alert,
-  ScrollView,
-  ActivityIndicator,
 } from "react-native";
-import { useState } from "react";
-import { useRouter } from "expo-router";
 
 const BASE_URL = "http://192.168.1.6:5000";
 
